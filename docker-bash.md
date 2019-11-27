@@ -13,7 +13,7 @@
 
    RUN apt-get update
    RUN apt-get upgrade -y
-   RUN apt install build-essential python python-pexpect libreadline-dev flex valgrind -y
+   RUN apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y
    ```
    
 5. Build docker image by running
