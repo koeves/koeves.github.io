@@ -30,7 +30,7 @@
    ```
    
    * `-it` runs Docker in interactive mode
-   * `-v $PWD:/files` copies current working directory to /files within the Docker image
+   * `-v $PWD:/files` links current working directory to /files within the Docker image
    * `test` is the name of the Docker image to run
    * `bash` runs `/bin/bash`
    
