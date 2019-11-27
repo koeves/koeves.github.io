@@ -1,6 +1,6 @@
 theme: minima 
 #jekyll-theme-minimal
 minima:
-  skin: solarized-dark
+  skin: solarized
 #header_pages:
   
