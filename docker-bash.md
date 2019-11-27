@@ -4,7 +4,7 @@
 
 2. In the Terminal cd to working directory
 
-3. Create a file named Dockerfile in working directory
+3. Create a file named `Dockerfile` in working directory
 
 4. Open Dockerfile and add the following lines:
 
@@ -15,13 +15,13 @@
    RUN apt-get upgrade -y
    RUN apt install build-essential python python-pexpect libreadline-dev flex valgrind -y
    ```
-
+   
 5. Build docker image by running
 
    ```
    docker build -t test .
    ```
-   Where 'test' is the name of your image.
+   Where 'test' is the name of the image.
 
 6. Run docker image with
 
