@@ -21,7 +21,7 @@
    ```
    docker build -t test .
    ```
-   Where 'test' is the name of the image.
+   Where `test` is the name of the image.
 
 6. Run docker image with
 
