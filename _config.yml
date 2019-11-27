@@ -1,5 +1,6 @@
 theme: minima 
 #jekyll-theme-minimal
-
-header_pages:
-  - blog.md
+minima:
+  skin: solarized-dark
+#header_pages:
+  
