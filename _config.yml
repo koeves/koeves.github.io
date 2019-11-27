@@ -1,6 +1,4 @@
-theme: minima 
-#jekyll-theme-minimal
-minima:
-  skin: solarized
-#header_pages:
+theme: jekyll-theme-minimal
+
+# minima
   
