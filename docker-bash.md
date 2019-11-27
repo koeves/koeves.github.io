@@ -6,10 +6,6 @@
 
 3. Create a file named Dockerfile in working directory
 
-   ```
-   touch Dockerfile
-   ```
-    
 4. Open Dockerfile and add the following lines:
 
    ```
@@ -19,7 +15,6 @@
    RUN apt-get upgrade -y
    RUN apt install build-essential python python-pexpect libreadline-dev flex valgrind -y
    ```
-   These will install all useful dependencies
 
 5. Build docker image by running
 
