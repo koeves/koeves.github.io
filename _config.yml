@@ -1,2 +1,5 @@
 theme: minima 
 #jekyll-theme-minimal
+
+header_pages:
+  - blog.md
