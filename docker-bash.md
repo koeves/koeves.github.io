@@ -2,7 +2,7 @@
 
 1. Install and run Docker Desktop [here](https://docs.docker.com/docker-for-mac/install/).
 
-2. In the Terminal cd to working directory
+2. In the Terminal `cd` to working directory
 
 3. Create a file named `Dockerfile` in working directory
 
