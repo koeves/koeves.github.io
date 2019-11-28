@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 # Interactive Bash session with Docker on Mac
 
 1. Install and run Docker Desktop [here](https://docs.docker.com/docker-for-mac/install/).
