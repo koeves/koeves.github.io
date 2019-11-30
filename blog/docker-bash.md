@@ -14,24 +14,24 @@ title: Interactive Bash session with Docker on Mac
 4. Open Dockerfile and add the following lines:
 
    ```
-   FROM ubuntu:latest
+   <span style="color:blue">FROM</span> ubuntu:latest
 
-   RUN apt-get update
-   RUN apt-get upgrade -y
-   RUN apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y
+   <span style="color:blue">RUN</span> apt-get update
+   <span style="color:blue">RUN</span> apt-get upgrade -y
+   <span style="color:blue">RUN</span> apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y
    ```
    
 5. Build docker image by running
 
    ```
-   docker build -t test .
+   $ docker build -t test .
    ```
    Where `test` is the name of the image.
 
 6. Run docker image with
 
    ```
-   docker run -it -v $PWD:/files test bash
+   $ docker run -it -v $PWD:/files test bash
    ```
    
    * `-it` runs Docker in interactive mode
