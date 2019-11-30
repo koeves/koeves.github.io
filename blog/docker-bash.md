@@ -14,7 +14,7 @@ title: Interactive Bash session with Docker on Mac
 4. Open Dockerfile and add the following lines:
 
    
-   <pre><code><span color="blue">FROM</span> ubuntu:latest
+   <pre><code><span style="color:blue">FROM</span> ubuntu:latest
 
    RUN apt-get update
    RUN apt-get upgrade -y
