@@ -18,7 +18,7 @@ title: Interactive Bash session with Docker on Mac
 
    RUN apt-get update
    RUN apt-get upgrade -y
-   RUN apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y</pre></code>
+   RUN apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y</code></pre>
    
    
 5. Build docker image by running
