@@ -5,7 +5,7 @@ date: 2019-11-27
 title: Interactive Bash session with Docker on Mac
 ---
 
-1. Install and run Docker Desktop [here](https://docs.docker.com/docker-for-mac/install/).
+1. Install and run Docker Desktop from [here](https://docs.docker.com/docker-for-mac/install/).
 
 2. In the Terminal `cd` to working directory
 
