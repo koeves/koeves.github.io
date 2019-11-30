@@ -14,11 +14,11 @@ title: Interactive Bash session with Docker on Mac
 4. Open Dockerfile and add the following lines:
 
    ```
-   <span style="color:blue">FROM</span> ubuntu:latest
+   FROM ubuntu:latest
 
-   <span style="color:blue">RUN</span> apt-get update
-   <span style="color:blue">RUN</span> apt-get upgrade -y
-   <span style="color:blue">RUN</span> apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y
+   RUN apt-get update
+   RUN apt-get upgrade -y
+   RUN apt install build-essential python3 python-pexpect libreadline-dev flex valgrind -y
    ```
    
 5. Build docker image by running
