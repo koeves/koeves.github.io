@@ -1,4 +1,9 @@
-# Writing a memory allocator in C
+---
+layout: post
+author: me
+date: 2019-12-20
+title: Interactive Bash session with Docker on Mac
+---
 
 This post will go through some of the key aspects of memory allocator design, i.e. an implementation of the malloc function family.
 
