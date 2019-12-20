@@ -4,7 +4,7 @@
 body {
   background-color: #FFF;
   padding:50px;
-  font: 14px/1.5 "Consolas", "Menlo", monospaced;
+  font: 14px/1.5 "Consolas", "Monaco", "Menlo", monospaced;
   color:#727272;
   font-weight:400;
 }
