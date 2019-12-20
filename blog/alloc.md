@@ -11,14 +11,12 @@ This post will go through some of the key aspects of memory allocator design, i.
 First let's gather some requirements that we want our allocator to have. 
 We will implement four functions, malloc, calloc, realloc and free, whose prototypes are defined as follows:
 
-{% highlight c linenos %}
-{% raw %}
+```c
 void *malloc(size_t size);
 void *calloc(size_t nmemb, size_t size);
 void *realloc(void *ptr, size_t size);
 void free(void *ptr);
-{% endraw %}
-{% endhighlight %}
+```
 
 ### malloc 
 The main purpose of the function will be to grow the program heap, thus allocating at least size bytes. We will also align the memory to 8 bytes. 
