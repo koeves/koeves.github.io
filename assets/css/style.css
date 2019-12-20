@@ -3,7 +3,8 @@
 body {
   background-color: #FFF;
   padding:50px;
-  font: 14px/1.5 "Menlo", "Consolas", "Monaco", monospaced;
+  font-family: "Menlo", monospaced;
+  font: 14px/1.5 "Menlo", monospaced;
   color:#727272;
   font-weight:400;
 }
@@ -67,7 +68,7 @@ blockquote {
 }
 
 code, pre {
-  font-family: Terminal, Monaco, Consolas, Bitstream Vera Sans Mono, Lucida Console, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family: Menlo, Terminal, Monaco, Consolas, Bitstream Vera Sans Mono, Lucida Console, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color:#333;
 }
 
