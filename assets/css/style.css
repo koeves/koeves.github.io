@@ -3,7 +3,7 @@
 body {
   background-color: #FFF;
   padding:50px;
-  font: 14px/1.5 "Consolas", "Monaco", "Menlo", monospaced;
+  font: 14px/1.5 "Monaco", "Consolas", "Menlo", monospaced;
   color:#727272;
   font-weight:400;
 }
