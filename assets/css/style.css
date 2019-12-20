@@ -68,7 +68,7 @@ blockquote {
 
 code, pre {
   font-family: Terminal, Monaco, Consolas, Bitstream Vera Sans Mono, Lucida Console, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  
+  color:#333;
 }
 
 pre {
