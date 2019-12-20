@@ -1,5 +1,5 @@
 @import "rouge-github";
-@import "native.css";
+@import "github-syntax-light/lib/github-light.css";
 
 body {
   background-color: #FFF;
