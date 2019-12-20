@@ -2,7 +2,7 @@
 
 This post will go through some of the key aspects of memory allocator design, i.e. an implementation of the malloc function family.
 
-## Step 1: Design
+## Step 1: Design
 First let's gather some requirements that we want our allocator to have. 
 We will implement four functions, malloc, calloc, realloc and free, whose prototypes are defined as follows:
 
