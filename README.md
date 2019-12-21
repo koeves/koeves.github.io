@@ -1,3 +1,3 @@
 # koeves.github.io
 
-I blog here sometimes.
+I [blog](http://koeves.github.io/blog) here sometimes.
