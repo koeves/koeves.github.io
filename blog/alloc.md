@@ -75,7 +75,7 @@ Let's combine the things previously listed and our refreshed knowledge of void p
 void *malloc(size_t size)
 {
     struct block *current = NULL;
-    size_t aligned_size = (size % 8 > 0) ? (size + (ALIGN_SIZE - (size % ALIGN_SIZE)) + BLOCK_SIZE) : (size + BLOCK_SIZE);
+    size_t aligned_size = (size % 8 > 0) ? (size + (ALIGN_SIZE - (size % ALIGN_SIZE)) + BLOCK_SIZE) : (size + BLOCK_SIZE);
     
     if ((current = sbrk(aligned_size)) == (void *)-1) 
         perror("sbrk");
