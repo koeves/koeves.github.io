@@ -31,7 +31,7 @@ struct block {
 }
 ```
 
-Now that we are at it, let's also define some macros and typedefs, whose use will become evident later.
+Now that we are at it, let's also define some macros, whose use will become evident later.
 ```c
 #define  ALIGN_SIZE  sizeof(long)
 #define  BLOCK_SIZE  sizeof(struct block)
