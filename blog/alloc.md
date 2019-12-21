@@ -81,7 +81,7 @@ void *malloc(size_t size)
         perror("sbrk");
     
     current->free = 0;
-    current->size = aligned_size;
+    current->size = aligned_size - BLOCK_SIZE;
     current->next_free = NULL;
     
     return (char *)current + BLOCK_SIZE;
