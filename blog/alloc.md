@@ -100,7 +100,7 @@ Extras:
 - release memory back to the OS (in case when the freed block is right at the end of the program heap)
 
 #### Basic functionality
-Combining the little `struct block *get_block(void *)` function we write just before, we can now mark a chunck of memory free by first getting the actual struct next to the block of memory, then setting the `free` bit to 1.
+Combining the little `struct block *get_block(void *)` function we wrote just before, we can now mark a chunck of memory free by first getting the actual struct next to the block of memory, then setting the `free` bit to 1.
 ```c
 void free(void *ptr)
 {  
