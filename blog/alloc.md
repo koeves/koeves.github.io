@@ -67,7 +67,7 @@ struct block *get_block(void *ptr)
     return (struct block *)((char *)ptr - sizeof(struct block));
 }
 ```
-In the latter case, we cast ptr to `char *` (which is 1 byte on most architectures), and then substract `sizeof(struct block)` bytes from the address.
+We cast ptr to `char *` (which is 1 byte on most architectures), and then substract `sizeof(struct block)` bytes from the address.
 
 #### Back to malloc now. 
 Let's combine the things previously listed and our refreshed knowledge of void pointers:
