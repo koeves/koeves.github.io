@@ -39,7 +39,7 @@ Now that we are at it, let's also define some macros, whose use will become evid
 We can now write a basic `malloc` function by piecing together the following things:
 - define a metadata struct
 - calculate the actual byte-aligned size that we'll use (i.e. the size should be evenly divisible by 8, as agreed upon)
-- use the function [`void *sbrk(intptr_t increment)`](https://linux.die.net/man/2/sbrk) that will grow the program's data space by `increment` bytes. The returned `void *`, which is the first address of the newly allocated space, will be assigned to our metadata struct, unless the return value is `(void *)-1`, in that case we will throw an error
+- use the function [void *sbrk(intptr_t increment)](https://linux.die.net/man/2/sbrk) that will grow the program's data space by `increment` bytes. The returned `void *`, which is the first address of the newly allocated space, will be assigned to our metadata struct, unless the return value is `(void *)-1`, in that case we will throw an error
 - return the first address of the free chunk, that is, `sizeof(struct block)` bytes away from the (first) address of the metadata struct
 
 #### Sidenote: On void pointers and arithmetic
