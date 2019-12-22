@@ -41,4 +41,4 @@ title: Interactive Bash session with Docker on Mac
    
    And now you have a shell :)
    
-   Useful for: running valgrind or any other currently not supported applications that otherwise runs fine on Linux
+   Useful for: running valgrind or any other currently not supported applications that otherwise runs fine on Linux.
