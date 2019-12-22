@@ -23,14 +23,14 @@ title: Interactive Bash session with Docker on Mac
    
 5. Build docker image by running
 
-   ```
+   ```bash
    $ docker build -t test .
    ```
    Where `test` is the name of the image.
 
 6. Run docker image with
 
-   ```
+   ```bash
    $ docker run -it -v $PWD:/files test bash
    ```
    
@@ -40,3 +40,5 @@ title: Interactive Bash session with Docker on Mac
    * `bash` runs `/bin/bash`
    
    And now you have a shell :)
+   
+   Useful for: running valgrind or any other currently not supported applications that otherwise runs fine on Linux
