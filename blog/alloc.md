@@ -133,3 +133,89 @@ void free(void *ptr)
 }
 ```
 
+Let's reuse some blocks now, shall we?
+
+### malloc 2.0
+In the previous chapter or so, we've created our free list of blocks. These blocks of course won't be reused unless we specifically do something about it. 
+First of all, we'll write a small function that loops through the freelist, and either returns the block if a fitting one is found, or `NULL`.
+```c
+struct block *get_free_block(size_t size)
+{
+    struct block *current = free_head;
+    
+    while (current) {
+        if (!current)
+            break;
+        
+        if ((current->size >= size) && (curr->free))
+            return current;
+        
+        current = current->next_free;
+    }
+    
+    return NULL;
+}
+```
+
+Second, when we found a suitable block to reuse, we need to do some maintaining on our freelist. When a have singly-linked list of free blocks, what scenarios might occur when we try to unlink a block?
+- free_head equals to free_tail (and therefore, the current reused block as well)
+- free_tail equals to current block
+- free_head equals to current block
+- current block is neither the above (i.e. current block is inbetween two other free blocks)
+We need to take care all of the above points.
+```c
+void maintain_freelist(struct block *current)
+{
+    if (free_head == free_tail) {
+        free_head = free_tail = NULL;
+        current->next_free = NULL;
+    }
+    else if (free_head == current) {
+        free_head = free_head->next_free;
+        current->next_free = NULL;
+    }
+    else if (free_tail == current) {
+        struct block *prev = free_head;
+        while (tmp) {
+            if (tmp->next_free == free_tail)
+                break;
+            prev = prev->next_free;
+        }
+        free_tail = prev;
+    }
+    else {
+        struct block *prev = free_head;
+        while (tmp) {
+            if (tmp->next_free == current)
+                break;   
+            prev = prev->next_free;
+        }
+        prev->next_free = current->next_free;
+        current->next_free = NULL;
+    }
+}
+```
+
+And finally, let's combine these two functions into our `malloc`.
+```c
+void *malloc(size_t size)
+{
+    struct block *current = NULL;
+    size_t aligned_size = (size % 8 > 0) ? (size + (ALIGN_SIZE - (size % ALIGN_SIZE)) + BLOCK_SIZE) : (size + BLOCK_SIZE);
+    
+    if ((current = get_free_block(size))) {
+        maintain_freelist(current);
+    }
+    else {
+        if ((current = sbrk(aligned_size)) == (void *)-1) 
+            perror("sbrk");
+            
+        current->size = aligned_size - BLOCK_SIZE;
+        current->next_free = NULL;
+    }
+    
+    current->free = 0;
+   
+    return (char *)current + BLOCK_SIZE;
+}
+```
