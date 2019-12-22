@@ -1,5 +1,5 @@
 ---
-layout: alloc
+layout: post
 author: me
 date: 2019-12-20
 download-pdf-url: alloc.pdf
