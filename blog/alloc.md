@@ -2,6 +2,7 @@
 layout: alloc
 author: me
 date: 2019-12-20
+download-pdf-url: alloc.pdf
 title: Writing a memory allocator in C
 ---
 
