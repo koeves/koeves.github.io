@@ -176,8 +176,8 @@ void maintain_freelist(struct block *current)
     }
     else if (free_tail == current) {
         struct block *prev = free_head;
-        while (tmp) {
-            if (tmp->next_free == free_tail)
+        while (prev) {
+            if (prev->next_free == free_tail)
                 break;
             prev = prev->next_free;
         }
@@ -185,8 +185,8 @@ void maintain_freelist(struct block *current)
     }
     else {
         struct block *prev = free_head;
-        while (tmp) {
-            if (tmp->next_free == current)
+        while (prev) {
+            if (prev->next_free == current)
                 break;   
             prev = prev->next_free;
         }
