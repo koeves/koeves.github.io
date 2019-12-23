@@ -158,7 +158,7 @@ struct block *get_free_block(size_t size)
 }
 ```
 
-Second, when we found a suitable block to reuse, we need to do some maintaining on our freelist. When a have singly-linked list of free blocks, what scenarios might occur when we try to unlink a block?
+Second, if we find a suitable block to reuse, we need to do some maintaining on our freelist. When a have singly-linked list of free blocks, what scenarios might occur when we try to unlink a block?
 
 - free_head equals to free_tail (and therefore, the current reused block as well)
 - free_tail equals to current block
