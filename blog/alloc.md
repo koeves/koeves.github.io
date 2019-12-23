@@ -2,7 +2,6 @@
 layout: post
 author: me
 date: 2019-12-20
-download-pdf-url: alloc.pdf
 title: Writing a memory allocator in C
 ---
 
@@ -204,13 +203,14 @@ And finally, let's combine these two functions into our `malloc`.
 ```c
 void *malloc(size_t size)
 {
-    struct block *current = NULL;
-    size_t aligned_size = (size % 8 > 0) ? (size + (ALIGN_SIZE - (size % ALIGN_SIZE)) + BLOCK_SIZE) : (size + BLOCK_SIZE);
+    struct block *current = get_free_block(size);
     
-    if ((current = get_free_block(size))) {
+    if (current) {
         maintain_freelist(current);
     }
     else {
+        size_t aligned_size = (size % 8 > 0) ? (size + (ALIGN_SIZE - (size % ALIGN_SIZE)) + BLOCK_SIZE) : (size + BLOCK_SIZE);
+        
         if ((current = sbrk(aligned_size)) == (void *)-1) 
             perror("sbrk");
             
