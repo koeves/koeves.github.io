@@ -148,7 +148,7 @@ struct block *get_free_block(size_t size)
         if (!current)
             break;
         
-        if ((current->size >= size) && (curr->free))
+        if ((current->size >= size) && (current->free))
             return current;
         
         current = current->next_free;
