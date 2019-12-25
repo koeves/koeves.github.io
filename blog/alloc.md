@@ -28,7 +28,7 @@ struct block {
     size_t        size;
     char          free;
     struct block  *next_free;
-}
+};
 ```
 
 Now that we are at it, let's also define some macros, whose use will become evident later.
