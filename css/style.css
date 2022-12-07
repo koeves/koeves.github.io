@@ -1,0 +1,20 @@
+body {
+    background-image: url('da.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#gol-container {
+    width: 80vmin;
+    height: 80vmin;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    margin-top: -25vmin;
+    margin-left: -25vmin;
+}
+
+.cell {
+    background-size: contain;
+}
