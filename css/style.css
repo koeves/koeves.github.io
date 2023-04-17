@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-image: url('da.jpg');
     background-repeat: no-repeat;
@@ -5,7 +10,7 @@ body {
     background-size: cover;
 }
 
-#gol-container {
+#canvas {
     width: 80vmin;
     height: 80vmin;
     position: absolute;
@@ -13,8 +18,4 @@ body {
     left: 45%;
     margin-top: -25vmin;
     margin-left: -25vmin;
-}
-
-.cell {
-    background-size: contain;
 }
