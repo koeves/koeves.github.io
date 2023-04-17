@@ -15,18 +15,17 @@ body {
     font-weight: 400;
 }
 
+#canvas-wrapper {
+    text-align: center;
+}
+
 #canvas {
-    width: 80vmin;
-    height: 80vmin;
-    position: absolute;
-    top: 35%;
-    left: 45%;
-    margin-top: -25vmin;
-    margin-left: -25vmin;
+    margin:0 auto;
+    height: 75%;
 }
 
 #menu {
     float: right;
-    margin-top: 100;
-    margin-right: 100;
+    margin-top: 10%;
+    margin-right: 0%;
 }
